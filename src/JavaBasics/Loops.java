@@ -21,6 +21,7 @@ public class Loops {
 //		i++;
 //	} while (i <= 10);
 	 
+	
 	 
 	 for(i = 1; i <= 10; i++) {
 		 if(i%2 == 0) {
