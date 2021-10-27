@@ -30,6 +30,14 @@ public class Array2D {
 		}
 	}
 	
+	public static void printDiagonally(int arr[][]) {
+		for(int gap = 0; gap < arr.length; gap++) {
+			for(int i = 0, j = gap; j <arr.length; j++, i++) {
+				System.out.println(arr[i][j]);
+			}
+		}
+	}
+	
 	public static void printSpiral(int arr[][]) {
 		
 		int minr = 0;
@@ -110,7 +118,8 @@ public class Array2D {
 		
 		display(arr);
 //		printZigZag(arr);
-		printSpiral(arr);
+//		printSpiral(arr);
+		printDiagonally(arr);
 		
 	}
 

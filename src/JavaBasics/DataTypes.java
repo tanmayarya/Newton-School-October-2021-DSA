@@ -73,11 +73,11 @@ public class DataTypes {
 		// Part 7
 		char ch = 'a';
 		ch = 97;
-//		ch = 64000;
+		ch = 64000;
 //		ch = 67000;
-//		ch = (char)67000;
+		ch = (char)67000;
 		
-//		ch = (char)(Math.pow(2, 16) - 1 + 98);
+		ch = (char)(Math.pow(2, 16) - 1 + 98);
 		System.out.println(ch);
 		
 		in = ch + 23;
