@@ -28,11 +28,23 @@ public class Strings {
 		
 	}
 	
+	// print all palindromic substrings
+	public static void printAllPaindromicSubstrings(String s) {
+		for(int start = 0; start < s.length(); start++) {
+			for(int end = start + 1; end <= s.length(); end++) {
+//				System.out.println(s.substring(start, end));
+				
+				if(isPalindrome(s.substring(start, end))) {
+					System.out.println(s.substring(start, end));
+				}
+			}
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String s = "Hi Hey How are you";
+		String s = "naman";
 //		s += 10;
 //		System.out.println(s);
 //		System.out.println(10 + 20 + "Hi" + 10 + 20);
@@ -59,7 +71,9 @@ public class Strings {
 //		s.toCharArray()
 
 //		printAllSubstrings("Hey");
-		System.out.println(isPalindrome("123214"));
+//		System.out.println(isPalindrome("123214"));
+		
+		printAllPaindromicSubstrings(s);
 	}
 
 }
