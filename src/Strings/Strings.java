@@ -49,7 +49,7 @@ public class Strings {
 //		System.out.println(s);
 //		System.out.println(10 + 20 + "Hi" + 10 + 20);
 		
-		char c = s.charAt(4);
+//		char c = s.charAt(4);
 //		System.out.println(c);
 		
 //		System.out.println(s.substring(1, 5));
@@ -73,7 +73,17 @@ public class Strings {
 //		printAllSubstrings("Hey");
 //		System.out.println(isPalindrome("123214"));
 		
-		printAllPaindromicSubstrings(s);
+		char c = 'e';
+		
+		System.out.println(c);
+		System.out.println(c - 2);
+		System.out.println((char)(c - 2));
+		
+		for(int i = 0; i < 26; i++) {
+			System.out.println((char)('a' + i) + " ->" + ('a' + i));
+		}
+		
+//		printAllPaindromicSubstrings(s);
 	}
 
 }

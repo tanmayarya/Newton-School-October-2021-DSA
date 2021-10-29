@@ -10,7 +10,7 @@ public class StringBuilderIntro {
 		StringBuilder sb = new StringBuilder();
 		
 		for(int i = 0; i < s.length(); i++) {
-			char c = s.charAt(i);
+			char c = s.charAt(i); // E
 			
 			char d;
 			if(c >= 'A' && c <= 'Z') // if c is Uppercase
