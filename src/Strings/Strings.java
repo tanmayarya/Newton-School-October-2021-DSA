@@ -73,17 +73,64 @@ public class Strings {
 //		printAllSubstrings("Hey");
 //		System.out.println(isPalindrome("123214"));
 		
-		char c = 'e';
-		
-		System.out.println(c);
-		System.out.println(c - 2);
-		System.out.println((char)(c - 2));
-		
-		for(int i = 0; i < 26; i++) {
-			System.out.println((char)('a' + i) + " ->" + ('a' + i));
-		}
+//		char c = 'e';
+//		
+//		System.out.println(c);
+//		System.out.println(c - 2);
+//		System.out.println((char)(c - 2));
+//		
+//		for(int i = 0; i < 26; i++) {
+//			System.out.println((char)('a' + i) + " ->" + ('a' + i));
+//		}
 		
 //		printAllPaindromicSubstrings(s);
+		
+		String a = "Hey How Are You";
+		String arr[] = a.split(" ");
+		
+		for(int i = 0; i < arr.length; i++)
+			System.out.println(i + "index, :" + arr[i]);
+		
+		char arr2[] = a.toCharArray();
+		for(int i = 0; i<arr2.length; i++) {
+			System.out.println(arr2[i]);
+			
+			
+		}
+		// aa
+		// aaa
+		// ba
+		// baa
+		
+		
+		System.out.println((int)' ');
+		
+		String q = "adadadf";
+		isPalindrome(q);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
+	
+	
 
 }

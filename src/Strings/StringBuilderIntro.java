@@ -10,7 +10,7 @@ public class StringBuilderIntro {
 		StringBuilder sb = new StringBuilder();
 		
 		for(int i = 0; i < s.length(); i++) {
-			char c = s.charAt(i); // E
+			char c = s.charAt(i); // e
 			
 			char d;
 			if(c >= 'A' && c <= 'Z') // if c is Uppercase
@@ -18,7 +18,7 @@ public class StringBuilderIntro {
 				d  = (char)(c - 'A' + 'a');
 			} 
 			else { // c is lowercase
-				d = (char)(c -'a' + 'A');
+				d = (char)(c - 'a' + 'A');
 			}
 			sb.append(d);
 			
@@ -34,6 +34,8 @@ public class StringBuilderIntro {
 	
 	//acd => a2c
 	public static String ASCIIDifference(String s) {
+		
+
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append(s.charAt(0));
@@ -49,7 +51,7 @@ public class StringBuilderIntro {
 		
 		return sb.toString();
 	}
-	
+	 
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -61,35 +63,42 @@ public class StringBuilderIntro {
 		//get char
 		char c = sb.charAt(0);
 		System.out.println(c);
-		
-		//set char
-		sb.setCharAt(2, 'a');
+//		
+//		//set char
+		sb.setCharAt(1, 'a');
 		System.out.println(sb);
 		
 		//insert or add at index		
 		sb.insert(1, 'e');
 		System.out.println(sb);
-		
+//		
 		//add in end
 		sb.append('c');
 		System.out.println(sb);
 
 		
 		//remove
-		sb.deleteCharAt(3);
+		sb.deleteCharAt(1);
+		System.out.println(sb);
+//		
+		
+		sb.append('d');
+		System.out.println(sb.length());
 		System.out.println(sb);
 		
 		//delete the substring
 		sb.delete(1, 4);
 		System.out.println(sb);
+//		
 		
-//		String s = sb.toString();
-//		System.out.println(s);
 		
-		System.out.println("--------------------");
-//		System.out.println(toggleCase("ABcdeFS"));
-		
-		System.out.println(ASCIIDifference("aefbd"));
+		String s = sb.toString();
+		System.out.println(s);
+//		
+//		System.out.println("--------------------");
+////		System.out.println(toggleCase("ABcdeFS"));
+//		
+//		System.out.println(ASCIIDifference("aefbd"));
 		
 	}
 

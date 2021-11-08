@@ -36,10 +36,12 @@ public class IntroToFunctions {
 		int nfact = fact(n); // n is argument
 		int nmrfact = fact(n - r);
 		
+		
 		int npr = nfact / nmrfact;
 		
 		System.out.println(npr);
 	}
+	
 	
 	
 	
