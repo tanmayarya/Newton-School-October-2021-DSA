@@ -1,37 +1,53 @@
 package OOPS;
 
-public class Basics {
+class Student {
+	String name;
+	int rollNo;
+	float marks;
 	
-	static class Student {
-		String name;
-		int rollNo;
-		float marks;
+	// default constructor
+	Student() {
 		
-		Student() {
-			this("Tanmay", 1, 1.1f);
-		}
 		
-		Student(String name, int rollNo, float marks) {
-			this.name = name;
-			this.rollNo = rollNo;
-			this.marks = marks;
-		}
-		
-		public void printInfo() {
-			System.out.println("Name :" + this.name);
-			System.out.println("RollNo :" + this.rollNo);
-			System.out.println("Marks :" + this.marks);
-		}
+		System.out.println("defaultv constructor");
+	}
+	
+	// parameterized constructor
+	Student(String name) {
 		
 	}
+	
+	// parameterized constructor
+	Student(String name, int rollNo, float marks) {
+		this.name = name;
+		this.rollNo = rollNo;
+		this.marks = marks;
+		
+	}
+	
+	public void printInfo() {
+		System.out.println("Name :" + this.name);
+		System.out.println("RollNo :" + this.rollNo);
+		System.out.println("Marks :" + this.marks);
+	}
+	
+}
+
+public class Basics {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Student s1 = new Student();
-		
+		final Student s1 = new Student();
+		s1.name = "Tanmay ";
 		Student s2 = new Student("Sid", 2, 3.4f);
 		s2.printInfo();
+		
+		final int a = 2;
+//		a = 3;
+		
+		
+//		printInfo();
 //		Student s3 = s2;
 		
 //		s1.name = "tanmay";
