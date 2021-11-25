@@ -11,7 +11,17 @@ public class Utility {
 		list.addFirst(20);
 		list.addFirst(30);
 		list.display();
-
+		list.addLast(50);
+		list.addLast(60);
+		list.display();
+		list.add(70, 3);
+		list.display();
+		System.out.println(list.get(3));
+		list.set(80, 4);
+		list.display();
+		list.removeFirst();
+		list.display();
+//		System.out.println(list.size());
 	}
 
 }
