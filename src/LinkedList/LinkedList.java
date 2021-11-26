@@ -85,6 +85,7 @@ public class LinkedList {
 		return temp.data;
 	}
 	
+	// O(n)
 	public Node getNode(int idx) {
 		if(idx < 0 || idx > size) {
 			return null;
@@ -125,6 +126,76 @@ public class LinkedList {
 		head = head.next;
 		size--;
 		return temp;
+	}
+	
+	public Node remove(int idx) {
+		if(idx < 0 || idx > size) {
+			return null;
+		}
+		
+		if(idx == 0) {
+			return removeFirst();
+		}
+		Node targetNode = getNode(idx);
+		Node n = getNode(idx - 1);
+		n.next = n.next.next;
+		size--;
+		if(idx == size - 1) {
+			
+			tail = n;
+		}
+		return targetNode;
+	}
+	
+	// O(n*n)
+	public void reverseDI() {
+		int l = 0;
+		int r = size - 1;
+		while(l < r) {
+			Node lnode = getNode(l);
+			Node rnode = getNode(r);
+			
+			int temp = lnode.data;
+			lnode.data = rnode.data;
+			rnode.data = temp;
+			
+			l++;
+			r--;
+		}
+		swapHeadTail();
+	}
+	
+	public void reversePI() {
+		
+		Node p = null, c = head, n;
+		while(c != null) {
+			n = c.next;
+			c.next = p;
+			p = c;
+			c = n;
+		}
+		swapHeadTail();
+	}
+	
+	public void reversePR() {
+		reversePRHelper(head);
+		swapHeadTail();
+	}
+	
+	private void reversePRHelper(Node c) {
+		if(c == tail) return;
+		
+		reversePRHelper(c.next);
+		Node n = c.next;
+		n.next = c;
+		c.next = null;
+		
+	}
+	
+	public void swapHeadTail() {
+		Node t = head;
+		head = tail;
+		tail = t;
 	}
 	
 	public void display() {
