@@ -209,4 +209,75 @@ public class LinkedList {
 		System.out.println(tail.data);	
 	}
 	
+	public void removeDuplicateInSortedLL() {
+		
+		Node temp = head;
+		
+		while(temp.next != null) {
+			if(temp.data == temp.next.data) {
+				temp.next = temp.next.next;
+				size--;
+			} else temp = temp.next;
+		}
+		tail = temp;
+	}
+	
+	public static LinkedList mergeSortedLL(LinkedList l1, LinkedList l2) {
+		
+		LinkedList result = new LinkedList();
+		Node one = l1.head;
+		Node two = l2.head;
+		
+		while(one != null && two != null) {
+			if(one.data <= two.data) {
+				if(result.size == 0) {
+					result.head = one;
+					result.tail = one;
+					
+				} else {
+					result.tail.next = one;
+					result.tail = one;
+					
+				}
+				result.size++;
+				one = one.next;
+				
+			} else { // node two is chosen
+				if(result.size == 0) {
+					result.head = two;
+					result.tail = two;
+					
+				} else {
+					result.tail.next = two;
+					result.tail = two;
+					
+				}
+				result.size++;
+				two = two.next;
+				
+			}
+		}
+		result.tail.next = one;
+		
+		while(one != null) {
+			result.tail.next = one;
+			result.tail = one;
+			result.size++;
+			one = one.next;
+		}
+		
+		while(two != null) {
+			result.tail.next = two;
+			result.tail = two;
+			result.size++;
+			two = two.next;
+		}
+		
+		return result;
+	}
+	
+	
+	
+	
+	
 }
