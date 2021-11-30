@@ -42,6 +42,8 @@ public class Utility {
 		list2.display();
 		LinkedList result = LinkedList.mergeSortedLL(list, list2);
 		result.display();
+		result.oddEven();
+		result.display();
 //		list.removeDuplicateInSortedLL();
 //		list.display();
 		

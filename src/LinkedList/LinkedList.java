@@ -276,7 +276,25 @@ public class LinkedList {
 		return result;
 	}
 	
-	
+	public void oddEven() {
+		
+		LinkedList odd = new LinkedList();
+		LinkedList even = new LinkedList();
+		
+		while(this.size() > 0) {
+			Node n = this.removeFirst();
+			
+			if(n.data % 2 == 0) {
+				even.addLast(n.data);
+			} else odd.addLast(n.data);
+		}
+		
+		odd.tail.next = even.head;
+		this.head = odd.head;
+		this.tail = even.tail;
+		this.size = odd.size + even.size;
+		
+	}
 	
 	
 	
