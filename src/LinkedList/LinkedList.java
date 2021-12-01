@@ -296,6 +296,26 @@ public class LinkedList {
 		
 	}
 	
+	Node left;
+	public void reverseDR() {
+		left = head;
+		reverseDR(head, 0);
+	}
+	
+	private void reverseDR(Node right, int ri) {
+		if(right == null) return;
+		
+		reverseDR(right.next, ri + 1);
+		
+		if(ri >= size/2) {
+			int temp = left.data;
+			left.data = right.data;
+			right.data = temp;
+			
+			left = left.next;
+		}
+	}
+	
 	
 	
 }

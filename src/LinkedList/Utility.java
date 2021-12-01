@@ -44,6 +44,8 @@ public class Utility {
 		result.display();
 		result.oddEven();
 		result.display();
+		result.reverseDR();
+		result.display();
 //		list.removeDuplicateInSortedLL();
 //		list.display();
 		
