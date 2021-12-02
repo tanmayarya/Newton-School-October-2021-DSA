@@ -316,6 +316,25 @@ public class LinkedList {
 		}
 	}
 	
+	public boolean isPalindrome() {
+		left = head;
+		return isPalindrome(head, 0);
+	}
 	
+	private boolean isPalindrome(Node right, int ri) {
+		
+		if(right == null) return true;
+		
+		boolean result = isPalindrome(right.next, ri + 1);
+		
+		if(ri < size/2) return result;
+		
+		if(result == true && left.data == right.data) {
+			left = left.next;
+			return true;
+		}
+		return false;
+		
+	}
 	
 }
